@@ -140,7 +140,7 @@ server <- function(input, output, session) {
     p
   })
 
-  
+  #This is a comment
 }
 
 # Run the application 
