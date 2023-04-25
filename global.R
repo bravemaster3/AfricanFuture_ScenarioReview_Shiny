@@ -21,6 +21,10 @@ unique_countries_first <- read.table("data/unique_countries_first.csv", sep=",",
 unique_countries_co <- read.table("data/unique_countries_co.csv", sep=",", header=TRUE)
 unique_countries_merged <- read.table("data/unique_countries_merged.csv", sep=",", header=TRUE)
 
+# Here I create vectors of the African and Overseas countries
+overseas_countries <- unname(unlist(filter(unique_countries, origin == "O")["country"]))
+african_countries <- unname(unlist(filter(unique_countries, origin == "A")["country"]))
+
 # copied from ggplot2 `geom_curve`
 geom_curve2 <- function(mapping = NULL, data = NULL,
                         stat = "identity", position = "identity",
